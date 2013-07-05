@@ -1,7 +1,7 @@
-LibroBox-Design-1.5
+LibroBox-Design-2.0
 ===================
 
-LibroBox Landing Page design 1.5.
+LibroBox Landing Page design 2.0.
 
 _This design has been tested and developed to work on the TP-Link MR 3020 router running Piratebox 0.5 (Lighttpd version)_
 
@@ -17,3 +17,5 @@ _This design has been tested and developed to work on the TP-Link MR 3020 router
 
 **Credits**
 For original idea and basic design please see https://github.com/Nargren/PirateBox or http://www.ubuntuhak.blogspot.co.uk/2012/07/pb-design-update.html
+
+Visit http://rgvlibrobox.com for updates on the LibroBox Project
