@@ -55,27 +55,7 @@ article.special{
 	border: 2px solid orangered;
 }
 
-/*===================================Prepare for deletion==============================*/
-/*input.button{
-	background: #1a1a1a;
-	color: #e9e9e9;
-	border-radius:10px;
-	text-align:center;
-	padding:5px;
-	width:100px;
-	display:inline-block;
-	-webkit-transition: all 0,5s ease-in;
-	-moz-transition: all 0,5s ease-in;
-	-o-transition: all 0,5s ease-in;
-	transition: all 0,5s ease-in;
-	font: bold 14px tahoma;
-}
-input.button:hover{
-	background: orange;
-	color:#1a1a1a;
-	font: bold 14px tahoma;
-}*/
-/*===================================Prepare for deletion==============================*/
+
 
 #page{
 	width: 1000px;
@@ -114,26 +94,7 @@ a:hover{
 	color:orangered;
 }
 
-/*===================================Prepare for deletion==============================*/
-/*a.links{
-	color: #1a1a1a;
-	font: bold 16px Arial;
-	text-decoration:none;
-	background: #E6E6E6;
-	border-radius:6px;
-	width:125px;
-	display:block;
-	text-align:center;	 
-}
-a.links:hover{
-	background: orange;
-	-moz-transition: all 0,5s ease-in;
-	-o-transition: all 0,5s ease-in;
-	transition: all 0,5s ease-in;
-}
- */
- 
- /*===================================Prepare for deletion==============================*/
+
  #logo{
 	text-align: center;
 	display:inline-block;

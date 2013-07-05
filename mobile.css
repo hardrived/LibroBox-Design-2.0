@@ -48,14 +48,7 @@ article{
     
 	text-align:left;
     
-    /*===================================Prepare for deletion==============================*/
-    /*padding:10px 5px 10px 5px; 
-	margin:10px 0px 10px 0px;
-	font:normal 15px helvetica, sans-serif;
-	line-height:125%;
-	background: white;
-    color: #000000;*/
-    /*===================================Prepare for deletion==============================*/
+    
 }
 article.special{
 	
@@ -94,12 +87,7 @@ a:hover{
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom: 2px solid orangered;
-    
-    /*===================================Prepare for deletion==============================*/
-	/*padding:7px 0px 4px 0px; /* top,right,bottom,left 
-	background: #DBDBDB;
-	margin-bottom:10px;*/
-    /*===================================Prepare for deletion==============================*/
+
 }
 
 #top_nav li{
@@ -109,26 +97,7 @@ a:hover{
 	font: bold 14px helvetica, sans-serif;
 }
 
-/*===================================Prepare for deletion==============================*/
-/*a.links{
-	color: #1a1a1a;
-	font: bold 16px Arial;
-	text-decoration:none;
-	background: #E6E6E6;
-	border-radius:6px;
-	width:auto;
-	display:block;
-	padding: 0px 10px 0px 10px;/* top,right,bottom,left 
-	text-align:center;	
-}
-a.links:hover{
-	background: orange;
-	-moz-transition: all 0,5s ease-in;
-	-o-transition: all 0,5s ease-in;
-	transition: all 0,5s ease-in;
-} */
 
-/*===================================Prepare for deletion==============================*/
 #contens{
 	text-align: justify;
 	display:-webkit-box;
@@ -160,14 +129,6 @@ a.links:hover{
 	border-radius:10px;
 	border: 2px solid orangered;
     
-    /*===================================Prepare for deletion==============================*/
-    /*padding: 10px; /* top,right,bottom,left 
-	padding-left: 15%; 
-	padding-right:15%;
-    background:#DBDBDB;
-    color: #000000;
-	line-height:115%;*/
-    /*==================================Prepare for deletion===============================*/
 }
 #station_cnt{
 	text-align: center;
