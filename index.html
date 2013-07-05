@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<!-- ===============================================================
+==============Custom Landing Page by Eduardo Robles=================
+|  _ \ / ___\ \   / / | |   (_) |__  _ __ ___   | __ )  _____  __
+| |_) | |  _ \ \ / /  | |   | | '_ \| '__/ _ \  |  _ \ / _ \ \/ /
+|  _ <| |_| | \ V /   | |___| | |_) | | | (_) | | |_) | (_) >  < 
+|_| \_\\____|  \_/    |_____|_|_.__/|_|  \___/  |____/ \___/_/\_\
+====================================================================
+=============Original design by html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>RGV LibroBox</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900" rel="stylesheet" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+	<script type="text/javascript">
+	
+	function refresh() {
+
+		$("#station_cnt").load("station_cnt.txt", function () {
+			$("#station_cnt a").attr("title", ""); //There is no need to ask the user to refresh the page, as station_cnt will refresh itself.
+		});
+	}
+		
+		$(document).ready(function () {
+			refresh();
+			interval = window.setInterval( 'refresh()', 60000 ); 
+			//Every minute (station_cnt.txt refreshes every 2 minutes, but this way we are sure to have statistics which aren't too old)
+		});
+  </script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+           // do stuff when DOM is ready
+	$.get('forum.html', function(data) {
+	$('div#forum_link').html(data);
+	} );
+	$.get('station_cnt.txt', function(data) {
+	$('div#station').html(data);
+	} );
+    $('div#shoutbox').ajaxError(function() {
+                $(this).text( "Triggered ajaxError handler on shoutbox" );
+				});
+
+       $("#sb_form").submit(function(event) {
+		/* stop form from submitting normally */
+		event.preventDefault();
+		post_shoutbox();
+            });
+       display_shoutbox();
+								});
+
+  function refresh_shoutbox () {
+          $.get('/cgi-bin/psoread.py', function(data) {
+                       $('div#shoutbox').html(data);
+                   } );
+  }
+  function refresh_time_sb () {
+     // Refresh rate in milli seconds
+     mytime=setTimeout('display_shoutbox()', 10000);
+
+  }
+
+  function post_shoutbox () {
+     $.post("/cgi-bin/psowrte.py" , $("#sb_form").serialize())
+           .success(function() { refresh_shoutbox(); });
+     $('#sb_form_text').val("");
+  }
+
+
+  function display_shoutbox() {
+     refresh_shoutbox();
+     refresh_time_sb();
+  }
+
+  function fnGetDomain(url) {
+     return url.match(/:\/\/(.[^/]+)/)[1];
+  }
+
+</script>
+	</head>
+	<body class="homepage">
+
+		<!-- Header Wrapper -->
+			<div id="header-wrapper" class="wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+						
+							<!-- Header -->
+								<div id="header">
+									
+									<!-- Logo -->
+										<div id="logo">
+											<h1><a href="#">RGV LibroBox</a></h1>
+											<span class="byline">RGV LibroBox - Free Content</span>
+										</div>
+									<!-- /Logo -->
+									
+									<!-- Nav -->
+										<nav id="nav">
+											<ul>
+												<li class="current_page_item"><a href="index.html">Home</a></li>
+												<li class="current_page_item"><a href="/Shared" target="blank" title="Browse & Downloads Files">Downloads</a></li>
+										</nav>
+									<!-- /Nav -->
+
+								</div>
+							<!-- /Header -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- /Header Wrapper -->
+		
+		<!-- Intro Wrapper -->
+			<div id="intro-wrapper" class="wrapper wrapper-style1">
+				<div class="title">The Introduction</div>
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+							
+							<!-- Intro -->
+								<section id="intro">
+									<p class="style1">So in case you were wondering what this is all about ...</p>
+									<p class="style2">
+										The LibroBox is a free-content distribution device.<br class="mobile-hide" /> by
+ 										<a href="http://rgvlibrobox.com/" class="nobr">RGV LibroBox</a>
+									</p>
+									<p class="style3">You can <strong>browse</strong>, <strong>download</strong> and <strong>share</strong> the digital files inside!</p>
+									<!--
+									<p class="style3">Mauris tellus lacus, tincidunt eget mattis at, laoreet vel velit. 
+									Aliquam diam ante, aliquet sit amet vulputate lorem at placerat at nisl. 
+									Maecenas et gravida ligula sed lacus euismod tincidunt nullam eget justo orci.</p>
+									
+									<ul class="actions">
+										<li><a href="#" class="button button-style3 button-big">Proceed</a></li>
+									</ul>
+									-->
+								</section>
+							<!-- /Intro -->
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- /Intro Wrapper -->
+		
+		<!-- Main Wrapper -->
+			<div class="wrapper wrapper-style2">
+				<div class="title">The Details</div>
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+							
+							<!-- Main -->
+								<div id="main">
+									
+									
+									
+									<!-- Features -->
+										<section id="features">
+											<header class="style1">
+												<h2>What you can do with the LibroBox</h2>
+												<p class="byline">The LibroBox is easy to use and extremely portable</p>
+											</header>
+											<div class="feature-list">
+												<div>
+													<div class="row">
+														<div class="6u">
+															<section>
+																<h3 class="icon icon-comment">Chat</h3>
+																<p>Chat with people around you anonymously and securely. We never log your data!!</p>
+															</section>
+														</div>
+														<div class="6u">
+															<section>
+																<h3 class="icon icon-refresh">Redistribute</h3>
+																<p>You can share and re-share all the content inside the LibroBox. Everything is "Public Domain" or under a Creative Commons license.</p>
+															</section>
+														</div>
+													</div>
+													<div class="row">
+														<div class="6u">
+															<section>
+																<h3 class="icon icon-picture">More than just ebooks</h3>
+																<p>Inside the LibroBox you will find images, videos, and music. If it is a digital file the LibroBox supports it.</p>
+															</section>
+														</div>
+														<div class="6u">
+															<section>
+																<h3 class="icon icon-cog">It works anywhere</h3>
+																<p>The small size of the LibroBox allows it to be powered with a portable power. You can take it with you anywhere where there may not be an Internet connection.</p>
+															</section>
+														</div>
+													</div>
+													<div class="row">
+														<div class="6u">
+															<section>
+																<h3 class="icon icon-wrench">Completely customizable</h3>
+																<p>You can fully customize the LibroBox to you hearts content. Under the hood you will find the power of Open Source technologies.</p>
+															</section>
+														</div>
+														<div class="6u">
+															<section>
+																<h3 class="icon icon-check">Libraries, Schools, Anywhere </h3>
+																<p>The LibroBox can be put to work in schools, libraries or community centers. The possibilities are endless.</p>
+															</section>
+														</div>
+													</div>
+												</div>
+											</div>
+											<ul class="actions actions-centered">
+												<li><a href="#" class="button button-style1 button-big">Get Started</a></li>
+												<li><a href="#" class="button button-style2 button-big">More Info</a></li>
+											</ul>
+										</section>
+									<!-- /Features -->
+									
+								</div>
+							<!-- /Main -->
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- /Main Wrapper -->
+		
+		
+
+		<!-- Footer Wrapper -->
+			<div id="footer-wrapper" class="wrapper">
+				<div class="title">Chat Room</div>
+				<div class="container">
+					<div class="row">
+						<div class="12u">
+						<p class="style2"> <!-- The CHATBOX -->
+				<h3>Welcome to the Chat!<h3>
+				<h2>100% Anonymity. Chat with others on the network.</h2>
+				<div class="shoutbox_content" id="shoutbox"></div>
+				<form method="POST" name="psowrte" id="sb_form" >
+				Name:<input type="text" value="Anonymous" name="name" size="10">&nbsp;&nbsp; Message:<input type="text" name="data" size="20" id='sb_form_text' >&nbsp;&nbsp;<input type="submit" value="Send" name="submit"/>
+				<br /><b>Color:</b> Default<input type="radio" value="def" name="color" checked> |
+				<font color="#0000FF">Blue</font><input type="radio" value="blue" name="color">
+				| <font color="#008000">Green</font><input type="radio" value="green" name="color">
+				| <font color="#FF8040">Orange</font><input type="radio" value="orange" name="color">
+				| <font color="#FF0000">Red</font><input type="radio" value="red" name="color">				
+				</form>				
+			</p>	
+							<!-- Copyright -->
+								<div id="copyright">
+									<span>
+										&copy; Untitled. Demo Images by <a href="http://ineedchemicalx.deviantart.com/">Felicia Simion</a>. Design by <a href="http://html5up.net/">HTML5 UP</a>.
+									</span>
+								</div>
+							<!-- /Copyright -->
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- /Footer Wrapper -->
+
+	</body>
+</html>
