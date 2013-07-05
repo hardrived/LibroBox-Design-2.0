@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!-- ===============================================================
 ==============Custom Landing Page by Eduardo Robles=================
 |  _ \ / ___\ \   / / | |   (_) |__  _ __ ___   | __ )  _____  __
@@ -6,29 +6,21 @@
 |  _ <| |_| | \ V /   | |___| | |_) | | | (_) | | |_) | (_) >  < 
 |_| \_\\____|  \_/    |_____|_|_.__/|_|  \___/  |____/ \___/_/\_\
 ====================================================================
-=============Original design by html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>RGV LibroBox</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,900" rel="stylesheet" />
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.js"></script>
-		<script src="js/config.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-panels.min.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
+=============Original design by Nargen ubuntuhak.blogspot.com======= -->
+
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="main.css" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>RGV Libro Box - Free Content</title>
+	<script src="jquery.min.js"/>	
 	<script type="text/javascript">
 	
+	if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) && sessionStorage["mobile"] != "false")
+		window.location = "mindex.html";
+	// If the device is mobile and hasn't chosen explicitly to open the browser version, then redirect it to the mobile page
+
+
 	function refresh() {
 
 		$("#station_cnt").load("station_cnt.txt", function () {
@@ -92,164 +84,27 @@
   }
 
 </script>
-	</head>
-	<body class="homepage">
+</head>
+  <body>
+  
+<!--====================================Navigation================================================================-->
+   <div id="page">
+    <nav id="top_nav">
+		<ul>
+			<li><a class="links" href="index.html" title="Home page"><img src="home.png">Home</a></li>
+			<li><a class="links" href="/Shared" target="blank" title="Browse & Download files"><img src="cloud-download.png">Download</a></li>
+			<!-- <li><a class="links" href="" title="Under construction...">Forum</a></li> --> 
+            <li><a class="links" href="mindex.html" title="For mobile users"><img src="browser-windows.png">Mobile</a></li>
+		</ul>
+	</nav>
+	
 
-		<!-- Header Wrapper -->
-			<div id="header-wrapper" class="wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="12u">
-						
-							<!-- Header -->
-								<div id="header">
-									
-									<!-- Logo -->
-										<div id="logo">
-											<h1><a href="#">RGV LibroBox</a></h1>
-											<span class="byline">RGV LibroBox - Free Content</span>
-										</div>
-									<!-- /Logo -->
-									
-									<!-- Nav -->
-										<nav id="nav">
-											<ul>
-												<li class="current_page_item"><a href="index.html">Home</a></li>
-												<li class="current_page_item"><a href="/Shared" target="blank" title="Browse & Downloads Files">Downloads</a></li>
-										</nav>
-									<!-- /Nav -->
 
-								</div>
-							<!-- /Header -->
-
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- /Header Wrapper -->
-		
-		<!-- Intro Wrapper -->
-			<div id="intro-wrapper" class="wrapper wrapper-style1">
-				<div class="title">The Introduction</div>
-				<div class="container">
-					<div class="row">
-						<div class="12u">
-							
-							<!-- Intro -->
-								<section id="intro">
-									<p class="style1">So in case you were wondering what this is all about ...</p>
-									<p class="style2">
-										The LibroBox is a free-content distribution device.<br class="mobile-hide" /> by
- 										<a href="http://rgvlibrobox.com/" class="nobr">RGV LibroBox</a>
-									</p>
-									<p class="style3">You can <strong>browse</strong>, <strong>download</strong> and <strong>share</strong> the digital files inside!</p>
-									<!--
-									<p class="style3">Mauris tellus lacus, tincidunt eget mattis at, laoreet vel velit. 
-									Aliquam diam ante, aliquet sit amet vulputate lorem at placerat at nisl. 
-									Maecenas et gravida ligula sed lacus euismod tincidunt nullam eget justo orci.</p>
-									
-									<ul class="actions">
-										<li><a href="#" class="button button-style3 button-big">Proceed</a></li>
-									</ul>
-									-->
-								</section>
-							<!-- /Intro -->
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- /Intro Wrapper -->
-		
-		<!-- Main Wrapper -->
-			<div class="wrapper wrapper-style2">
-				<div class="title">The Details</div>
-				<div class="container">
-					<div class="row">
-						<div class="12u">
-							
-							<!-- Main -->
-								<div id="main">
-									
-									
-									
-									<!-- Features -->
-										<section id="features">
-											<header class="style1">
-												<h2>What you can do with the LibroBox</h2>
-												<p class="byline">The LibroBox is easy to use and extremely portable</p>
-											</header>
-											<div class="feature-list">
-												<div>
-													<div class="row">
-														<div class="6u">
-															<section>
-																<h3 class="icon icon-comment">Chat</h3>
-																<p>Chat with people around you anonymously and securely. We never log your data!!</p>
-															</section>
-														</div>
-														<div class="6u">
-															<section>
-																<h3 class="icon icon-refresh">Redistribute</h3>
-																<p>You can share and re-share all the content inside the LibroBox. Everything is "Public Domain" or under a Creative Commons license.</p>
-															</section>
-														</div>
-													</div>
-													<div class="row">
-														<div class="6u">
-															<section>
-																<h3 class="icon icon-picture">More than just ebooks</h3>
-																<p>Inside the LibroBox you will find images, videos, and music. If it is a digital file the LibroBox supports it.</p>
-															</section>
-														</div>
-														<div class="6u">
-															<section>
-																<h3 class="icon icon-cog">It works anywhere</h3>
-																<p>The small size of the LibroBox allows it to be powered with a portable power. You can take it with you anywhere where there may not be an Internet connection.</p>
-															</section>
-														</div>
-													</div>
-													<div class="row">
-														<div class="6u">
-															<section>
-																<h3 class="icon icon-wrench">Completely customizable</h3>
-																<p>You can fully customize the LibroBox to you hearts content. Under the hood you will find the power of Open Source technologies.</p>
-															</section>
-														</div>
-														<div class="6u">
-															<section>
-																<h3 class="icon icon-check">Libraries, Schools, Anywhere </h3>
-																<p>The LibroBox can be put to work in schools, libraries or community centers. The possibilities are endless.</p>
-															</section>
-														</div>
-													</div>
-												</div>
-											</div>
-											<ul class="actions actions-centered">
-												<li><a href="#" class="button button-style1 button-big">Get Started</a></li>
-												<li><a href="#" class="button button-style2 button-big">More Info</a></li>
-											</ul>
-										</section>
-									<!-- /Features -->
-									
-								</div>
-							<!-- /Main -->
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- /Main Wrapper -->
-		
-		
-
-		<!-- Footer Wrapper -->
-			<div id="footer-wrapper" class="wrapper">
-				<div class="title">Chat Room</div>
-				<div class="container">
-					<div class="row">
-						<div class="12u">
-						<p class="style2"> <!-- The CHATBOX -->
+<!--=================================Left Column====================================================================-->	
+	<div id="contents">
+		<section id="main">	
+			<img id="side_logo" src="piratebox-logo.png" title="librobox"><!-- Image goes here -->
+			<article class="special"> <!-- The CHATBOX -->
 				<h3>Welcome to the Chat!<h3>
 				<h2>100% Anonymity. Chat with others on the network.</h2>
 				<div class="shoutbox_content" id="shoutbox"></div>
@@ -259,22 +114,35 @@
 				<font color="#0000FF">Blue</font><input type="radio" value="blue" name="color">
 				| <font color="#008000">Green</font><input type="radio" value="green" name="color">
 				| <font color="#FF8040">Orange</font><input type="radio" value="orange" name="color">
-				| <font color="#FF0000">Red</font><input type="radio" value="red" name="color">				
+				| <font color="#FF0000">Red</font><input type="radio" value="red" name="color"></p>				
 				</form>				
-			</p>	
-							<!-- Copyright -->
-								<div id="copyright">
-									<span>
-										&copy; Untitled. Demo Images by <a href="http://ineedchemicalx.deviantart.com/">Felicia Simion</a>. Design by <a href="http://html5up.net/">HTML5 UP</a>.
-									</span>
-								</div>
-							<!-- /Copyright -->
-						
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- /Footer Wrapper -->
+			</article>	
+		</section>	
+<!--==================================Rigth Column=====================================================================-->
+			<aside id="main_side">			
+				<article>
+				<h2>About the LibroBox</h2> 
+					<p>I am Eduardo Robles I graduated from the University of Texas Pan-American in Anthropology and Mexican American Studies.</p>
+					<p>The Libro Box is a sans-internet wireless content distribution device. 
+					Meaning that the device provides free access to text, audio, video, etc., to anyone who can connect to its WiFi signal.</p>
+					<p>I hope to use the Libro Box in South Texas first and then move on to other where it may be needed. But the goal is to take it to Arizona and participate in the Librotraficante Movement.</p>
+					<p>My passion for technology and community development led me to start this project. Because I believe in using technology as an equalizer I hope to provide valuable information and close the digital divide.</p><p> Read the <a href="Shared/README.pdf">READ ME</a> for more information on this project</p>
+				</article>					
+				<article>
+					<h2>Do you want to build your LibroBox?</h2> 
+			<p>LibraryBox was created by <a href="http://jasongriffey.net">Jason Griffey</a> (http://www.jasongriffey.net) and the code behind it is free and open source software. More about the LibraryBox project can be found at <a href="http://librarybox.us">http://librarybox.us</a></p>  
+			<p>LibraryBox is a fork of the <a href-"http://wiki.daviddarts.com/piratebox">PirateBox project</a>, which was created by David Darts and is registered under a Free Art License (2011). To learn more about the PirateBox project, please visit http://wiki.daviddarts.com/piratebox</p>				
+				</article>
+			</aside>
+    <!-- And a div for station_cnt -->
+    		<div id="station_cnt"></div>
+    </div>		
+<!--==================================Footer===============================================================================-->
+		<footer id="footer">
+         <p>Storage 1GB | Speeds up to 2 MB/s | TP-Link MR3020 | Design 2.0 by Nagren | Custom Landing Page by Eduardo Robles</p>
+         
+		</footer>
 
-	</body>
+</div>
+</body>
 </html>
